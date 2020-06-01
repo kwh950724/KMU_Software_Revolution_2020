@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+  <title>RESUME</title>
+  <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/afb922ce7c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <style>
+    body {
+      width:900px;
+      margin: 0 auto;
+    }
+    #section, #aside {
+      display:block;
+      text-align:center;
+    }
+    #section {
+      float:left;
+      background-color:#0B6138;
+      border-top:1px solid #000000;
+      border-left:1px solid #000000;
+      border-bottom:1px solid #000000;
+      width:250px;
+      height:1820px;
+    }
+    #aside {
+      float:left;
+      background-color:#FAFAFA;
+      border-top:1px solid #000000;
+      border-right:1px solid #000000;
+      border-bottom:1px solid #000000;
+      width:550px;
+      height:1820px;
+    }
+    #box {
+      background-color:#0B6138;
+      width:150px;
+      height:150px;
+      border-radius:70%;
+      border:2px solid #FFFFFF;
+      overflow:hidden;
+      margin-top:35px;
+      margin-left:50px;
+    }
+    #profile {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    #info {
+      background-color:#0B6138;
+      width:150px;
+      height:150px;
+      margin-top:40px;
+      margin-left:50px;
+      text-align:left;
+    }
+    #icon {
+      float:left;
+      background-color:#0B6138;
+      width:20px;
+      text-align: center;
+    }
+    #address {
+      float:left;
+      background-color:#0B6138;
+      width:120px;
+      margin-top:5px;
+      margin-left:5px;
+    }
+    #name {
+      width:500px;
+      height:100px;
+      margin-top:50px;
+      margin-left:25px;
+      text-align:left;
+    }
+    #head {
+      float:left;
+      width:500px;
+      height:30px;
+      background-color:#D8D8D8;
+      text-align:left;
+      line-height:29px;
+      margin-left:25px;
+    }
+    #work_experience {
+      width:500px;
+      margin-left:25px;
+      margin-top:25px;
+      text-align:left;
+      border-left:2px solid black;
+      border-bottom:2px solid black;
+      border-bottom-left-radius:5%;
+    }
+    #year {
+      float:left;
+      width:150px;
+      height:auto;
+      text-align:left;
+    }
+    #content {
+      float:left;
+      width:340px;
+      height:auto;
+      text-align:left;
+      margin-left:10px;
+    }
+    #myImg {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #myImg:hover {opacity: 0.7;}
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    .modal-content, #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)}
+      to {-webkit-transform:scale(1)}
+    }
+    @keyframes zoom {
+      from {transform:scale(0)}
+      to {transform:scale(1)}
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+  <script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDRXvXBlR-RbsNr4JBo8AvWCQAyjwjUCEo",
+      authDomain: "resume-9221a.firebaseapp.com",
+      databaseURL: "https://resume-9221a.firebaseio.com",
+      projectId: "resume-9221a",
+      storageBucket: "resume-9221a.appspot.com",
+      messagingSenderId: "958684035428",
+      appId: "1:958684035428:web:9b858e2f6b8d77aa576271",
+      measurementId: "G-HB5D8FJ7PJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <div id="section">
+    <div id="box">
+      <img id="profile" src="./profile.jpg">
+    </div>
+    <div id="info">
+      <p style="font-family:'Roboto', sans-serif;font-weight:bold;color:white;">CONTACT</p>
+      <p>
+        <div id="icon" style="font-size:18px;height:54px;color:white;"><i class="fas fa-map-marker-alt"></i></div>
+        <div id="address" style="font-family:'Roboto Condensed', sans-serif;font-size:12px;height:54px;color:white;">77 Jeongneung-ro, Seongbuk-gu, Seoul, 02707, Korea</div>
+      </p>
+      <p>
+        <div id="icon" style="font-size:18px;height:23px;color:white;"><i class="fas fa-phone-alt"></i></i></div>
+        <div id="address" style="font-family:'Roboto Condensed', sans-serif;font-size:12px;height:23px;color:white;">+82 10-9025-6429</div>
+      </p>
+      <p>
+        <div id="icon" style="font-size:18px;height:30px;color:white;"><i class="fas fa-envelope"></i></div>
+        <div id="address" style="font-family:'Roboto Condensed', sans-serif;font-size:12px;height:30px;color:white;">kwh950724@gmail.com</div>
+      </p>
+      <p>
+        <div id="icon" style="font-size:18px;height:30px;color:white;margin-top:-7px;"><i class="fab fa-github"></i></div>
+        <div id="address" style="font-family:'Roboto Condensed', sans-serif;font-size:12px;height:30px;color:white;margin-top:-2px;"><a href="https://github.com/kwh950724" target="_blank">https://github.com/kwh950724</a></div>
+      </p>
+    </div>
+  </div>
+
+  <div id="aside">
+    <div id="name">
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:40px;">WOONG-HYUN KA</span><br>
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:13px;">AUTONOMOUS DRIVING SOFTWARE ENGINEER</span>
+    </div>
+
+    <div id="head">
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;color:black;margin-left:18px;">EDUCATION</span>
+    </div>
+    <div id="work_experience" style="height:110px;">
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2015.03 - 2021.02</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">Kookmin University</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;">BC, Department of Automotive and IT Convergence</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Current GPA: 3.93 / 4.5</span>
+      </div>
+    </div>
+
+    <div id="head" style="margin-top:20px;">
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;color:black;margin-left:18px;">SKILL</span>
+    </div>
+    <div id="work_experience" style="height:340px;">
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">Programming</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">Languages</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- C / C++<br>- Python</span><br>
+        <p style="height:25px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">Applications</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- ROS</span>
+        </p>
+      </div>
+
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">Hardware</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">Sensors</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- 2D / 3D LiDAR<br>- GPS<br>- IMU</span>
+      </div>
+
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">Language</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">TOEIC - ETS</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Total score: 925 (LC: 465 / RC: 460)</span>
+      </div>
+    </div>
+
+    <div id="head" style="margin-top:20px;">
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;color:black;margin-left:18px;">WORK EXPERIENCE</span>
+    </div>
+    <div id="work_experience" style="height:410px;">
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2020.06 - 2020.09</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;"><a href="http://urobot.kaist.ac.kr/" target="_blank">KAIST Urban Robotics Lab</a></span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;">Intership</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- As a member of the autonomous driving team, plan to research visual SLAM and robotics field.</span>
+      </div>
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2019.12 - 2020.02</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;"><a href="http://vdclab.kaist.ac.kr/" target="_blank">KAIST VDC Lab</a></span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;">Intership</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Perform vehicle-based offline mapping and real-time localization through a graph-based SLAM project.<br>- Develop 3D LiDAR-based lane detection algorithm.</span>
+      </div>
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2019.01 - 2019.12</span></div>
+      <div id="content" style="color:black;margin-top:12px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;"><a href="https://avees.kookmin.ac.kr/" target="_blank">Kookmin Univ. Avees Lab</a></span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;">Undergraduate research assistant</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Develop vision-based lane detection algorithm for platooning.<br>- Participate in KSAE 2019 annual autumn conference poster session as a first author.</span>
+      </div>
+    </div>
+
+    <div id="head" style="margin-top:20px;">
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;color:black;margin-left:18px;">AWARDS & HONORS</span>
+    </div>
+    <div id="work_experience" style="height:530px;">
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2019.11</span></div>
+      <div id="content" style="color:black;margin-top:10px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">3rd PAMS University Autonomous Vehicle Technology Competition</span><br>
+        <i class="fas fa-award" style="font-size:14px;"></i><span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;margin-left:5px;">1st Place</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- As a team leader, develop maintaining distance and overtaking leading vehicle algorithm.</span>
+      </div>
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2019.09</span></div>
+      <div id="content" style="color:black;margin-top:10px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">2019 International Student Car Competition Autonomous Vehicle</span><br>
+        <i class="fas fa-award" style="font-size:14px;"></i><span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;margin-left:5px;">3rd Place</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- As a team leader, develop GPS-based driving algorithm and 3D LiDAR based parking algorithm.</span>
+      </div>
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2018.11</span></div>
+      <div id="content" style="color:black;margin-top:10px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">2rd PAMS University Autonomous Vehicle Technology Competition</span><br>
+        <i class="fas fa-award" style="font-size:14px;"></i><span style="font-family:'Roboto Condensed', sans-serif;font-weight:bold;font-size:14px;margin-left:5px;">2nd Place</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Develop static obstacle avoiding algorithm and state machine package that integrate systems.</span>
+      </div>
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2018.10</span></div>
+      <div id="content" style="color:black;margin-top:10px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">3rd F1/10 Autonomous Racing Competition</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Develop 2D LiDAR-based autonomous driving architecture.</span>
+      </div>
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2018.05</span></div>
+      <div id="content" style="color:black;margin-top:10px;">
+        <span style="font-family:'Roboto', sans-serif;font-weight:bold;font-size:15px;">2018 International Student Car Competition Autonomous Vehicle</span><br>
+        <span style="font-family:'Roboto Condensed', sans-serif;font-size:14px;">- Develop dynamic obstacle avoiding algorithm.</span>
+      </div>
+    </div>
+
+    <div id="head" style="margin-top:20px;">
+      <span style="font-family:'Roboto', sans-serif;font-weight:bold;color:black;margin-left:18px;">PUBLICATION</span>
+    </div>
+    <div id="work_experience" style="height:125px;">
+      <div id="year" style="font-size:15px;color:black;margin-top:13px;"><i class="fas fa-circle" style="margin-left:-8px;"></i><span style="font-family:'Roboto', sans-serif;font-weight:bold;margin-left:10px;">2019.11</span></div>
+      <div id="content" style="color:black;margin-top:10px;">
+        <span style="font-family:'Roboto', sans-serif;font-size:13px;">Woonghyun Ka, Sangpil Lee, Jahyong Choi, and Jong-Chan Kim, Feature Comparison of Open-source Autonomous Driving Simulators, KSAE Conference, Nov. 2019. [PDF]<img id="myImg" src="./pdf_button.png" alt="PDF viewer button" style="width:15px;"></span>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01" src="./paper.jpg" alt="Feature Comparison of Open-source Autonomous Driving Simulators">
+          <div id="caption"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        captionText.innerHTML = modalImg.alt;
+      }
+
+      var span = document.getElementsByClassName("close")[0];
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </div>
+</body>
+</html>
